@@ -59,7 +59,7 @@ $(function() {
                     fullAddress = address + "<br>" + city + ", " + state + " " + zip;
 
                     $.ajax({
-                        url: "././mailer/contact_me.php",
+                        url: "https://formspree.io/contact@casasbrush.com",
                         type: "POST",
                         data: {
                             name: name,
@@ -98,7 +98,7 @@ $(function() {
             }
             else{
                 $.ajax({
-                    url: "././mailer/contact_me.php",
+                    url: "https://formspree.io/contact@casasbrush.com",
                     type: "POST",
                     data: {
                         name: name,

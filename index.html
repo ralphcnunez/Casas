@@ -272,7 +272,7 @@
                                         </div>
                                         <div class="owl-item">
                                             <p>
-                                                "Casas brush is family owned and operated. Ralph and Ronald do an amazing job at a reasonable price, have used
+                                                "Casas brush is family owned and operated. They do an amazing job at a reasonable price, have used
                                                 Casas Brush multiple times for all our painting needs. Very professional and on time. You
                                                 cannot go wrong hiring this company.
                                                 Casas and their crew are the best!"
@@ -311,26 +311,26 @@
                     <div class="col-md-9">
                         <h3 style="text-align: center">Leave us a message</h3>
                         <hr style="background: #ddd;">
-                        <form name="sentMessage" id="contactForm" novalidate>
+                        <form action="https://formspree.io/contact@casasbrush.com" method="POST">
                             <div class="row">
                                 <div class="col-md-4 col-xs-6">
                                     <div class="form-group">
                                         <label for="name">Name <span style="color: red">*</span></label>
-                                        <input type="text" id="name" class="form-control" required>
+                                        <input type="text" id="name" name="name"class="form-control" required>
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-xs-6">
                                     <div class="form-group">
                                         <label for="phone">Phone <span style="color: red">*</span></label>
-                                        <input type="text" id="phone" class="form-control" required>
+                                        <input name="phone"type="text" id="phone" class="form-control" required>
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-xs-12">
                                     <div class="form-group">
                                         <label for="email">Email <span style="color: red">*</span></label>
-                                        <input type="email" id="email" class="form-control" required>
+                                        <input name="email"type="email" id="email" class="form-control" required>
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
@@ -340,7 +340,7 @@
                                 <div class="col-md-12 col-xs-12">
                                     <div class="form-group">
                                         <label for="inputAddress">Address</label>
-                                        <input onfocus="clearText('.address')" onblur="clearAll()" type="text" class="form-control" id="inputAddress">
+                                        <input name="address" onfocus="clearText('.address')" onblur="clearAll()" type="text" class="form-control" id="inputAddress">
                                         <p class="text-danger address"></p>
                                     </div>
                                 </div>
@@ -349,16 +349,16 @@
                             <div class="row">
                                 <div class="form-group col-md-6 col-xs-5">
                                     <label for="inputCity">City</label>
-                                    <input onfocus="clearText('.city')" onblur="clearAll()" type="text" class="form-control" id="inputCity">
+                                    <input name="city" onfocus="clearText('.city')" onblur="clearAll()" type="text" class="form-control" id="inputCity">
                                     <p class="text-danger city"></p>
                                 </div>
                                 <div class="form-group col-md-2 col-xs-3">
                                     <label for="inputState">State</label>
-                                    <input type="text" class="form-control" style="padding-right: 10px;" id="inputState" value="">
+                                    <input name="state" type="text" class="form-control" style="padding-right: 10px;" id="inputState" value="">
                                 </div>
                                 <div class="form-group col-md-4 col-xs-4">
                                     <label for="inputZip">Zip</label>
-                                    <input onfocus="clearText('.zip')" onblur="clearAll()" type="text" class="form-control" id="inputZip">
+                                    <input name="zip" onfocus="clearText('.zip')" onblur="clearAll()" type="text" class="form-control" id="inputZip">
                                     <p class="text-danger zip"></p>
                                 </div>
                             </div>
@@ -366,7 +366,7 @@
                             <div class="row">
                                 <div class="form-group col-md-12 col-xs-12">
                                     <label for="message">Message <span style="color: red">*</span></label>
-                                    <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                                    <textarea name="message" name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -398,9 +398,10 @@
                             <h3>Contact Info</h3>
                             <hr>
                             <div class="contact-item">
-                                <p>Phone: 201-598-4486</p> <br>
+                                <p>Phone: (201)-614-7073 </p> 
+                                <br>
                                 <p>Email:</p>
-                                <a href="mailto:contact@d2developers.com" target="_top">contact@d2developers.com</a>
+                                <a href="mailto:contact@casasbrush.com" target="_top">contact@casasbrush.com</a>
                             </div>
                         </div>
                     </div>
@@ -426,7 +427,6 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nivo-lightbox/1.2.0/nivo-lightbox.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-        <script type="text/javascript" src="js/contact_me.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

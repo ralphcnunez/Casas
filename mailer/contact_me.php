@@ -1,36 +1,14 @@
-<?php
-    // Check for empty fields
-    if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message']) ||
-       !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-       {
-        echo "No arguments Provided!";
-        return false;
-       }
+ <?php
 
-    $name = $_POST['name'];
-    $email_address = $_POST['email'];
-    $message = $_POST['message'];
-    $address = $_POST['address'];
-    $emailUpdates = $_POST['emailUpdates'];
-    $phone = $_POST['phone'];
-    $from = 'contact@d2developers.com';
+if (isset($_POST['submit'])) {
+$name = $_POST['name'];
+$subject = $_POST['subject'];
+$mailFrom = $_POST['mail'];
+$message = $_POST['message'];
+$mailTo = "contact@meandeepclean.com";
+$headers = "From: ".$mailFrom;
+$txt = "You have received an e-mail from ".$name.".\n\n".$message;
 
-    // Create the email
-    $headers  = "From: $from\r\n";
-    $headers .= "Content-type: text/html\r\n";
-    //$headers .= "Cc: email";
-
-    $email_subject = "Website Contact Form:  $name";
-    $email_body = "Name: $name<br/>Email: $email_address<br/>Phone: $phone <br/><br/>Address: <br/> $address <br/><br/>$emailUpdates<br/><br/>Message:<br/>$message";
-
-    //Send mail and retrieve value of success or fail
-    $result = mail("contact@d2developers.com", $email_subject, $email_body, $headers);
-
-    if(!$result) {
-        echo 'Message could not be sent.';
-        return false;
-    }
-    else {
-        echo 'Message has been sent';
-        return true;
-    }
+mail($mailTo, $subject, $txt, $headers);
+header("Location: index.php?mailsend");
+}
